@@ -1,4 +1,5 @@
-// Home Content
+@import 'variables';
+@import 'mixins';
 
 .home {
 
@@ -58,6 +59,14 @@
       }
 
       .btn {
+        background-color: @btn-bg-color;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        .center();
+        .btnmixin(16px, @nav-font);
+
+        
       }
     }
 
