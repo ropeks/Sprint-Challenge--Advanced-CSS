@@ -1,1 +1,26 @@
-// Navigation code here
+@import 'variables';
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: @nav-border;
+    background-color: @nav-bg;
+    font-family: @nav-font;
+    
+
+    h2 {
+        text-align: center;
+        margin-top: 13px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 15px;
+            font-size: 16px;
+        }
+    }
+}
