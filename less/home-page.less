@@ -1,4 +1,5 @@
-// Home Content
+@import 'variables';
+@import 'mixins';
 
 .home {
 
@@ -10,6 +11,10 @@
 
     p {
       padding:0 15px;
+    }
+
+    img {
+      width: 100%;
     }
   
   }
@@ -46,6 +51,13 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      display: flex;
+      flex-direction: column-reverse;
+      
+      width: 100%;
+  }
+
     .walk-text {
       width: 50%;
 
@@ -58,7 +70,29 @@
       }
 
       .btn {
+        background-color: @btn-bg-color;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        .center();
+        .btnmixin(16px, @nav-font);
+
+        &:hover {
+          background-color: aliceblue;
+          color: @btn-bg-color;
+        }
+
+        @media @phone {
+          .center();
+          width: 100%
       }
+      }
+      @media @phone {
+        display: flex;
+        flex-direction: column;
+        .center();
+        width: 100%
+    }
     }
 
     .walk-img {
@@ -70,6 +104,12 @@
         height: auto;
         border-radius: 10px;
       }
+
+      @media @phone {
+        .center();
+        width: 100%;
+        margin-bottom: 10px;
+    }
     }
   }
 }// home
